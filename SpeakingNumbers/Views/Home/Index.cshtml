@@ -1,0 +1,15 @@
+﻿@model SpeakingNumbers.Models.InputModel 
+@{
+    ViewBag.Title = "Speaking Numbers";
+}
+
+@{ Html.EnableClientValidation(true); }
+
+<div class="sixteen columns centering">
+    @{ Html.BeginForm("Index", "Home"); }
+        @Html.LabelFor(x => x.NumberAsString)
+        @Html.TextBoxFor(x => x.NumberAsString)
+        @Html.ValidationMessageFor(x => x.NumberAsString)
+        <input type="submit"/>
+    @{ Html.EndForm(); }
+</div>
